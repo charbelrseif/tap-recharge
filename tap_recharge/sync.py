@@ -435,7 +435,7 @@ def sync(client, catalog, state, start_date):
             'path': 'subscriptions',
             'params': {},
             'data_key': 'subscriptions',
-            'bookmark_query_field': 'updated_at_max',
+            'bookmark_query_field': 'updated_at_min',
             'bookmark_field': 'updated_at',
             'bookmark_type': 'datetime',
             'id_fields': ['id']
