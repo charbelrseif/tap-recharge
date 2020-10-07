@@ -143,6 +143,8 @@ def sync_endpoint(client, #pylint: disable=too-many-branches
             elif bookmark_type == 'integer':
                 params[bookmark_query_field] = last_integer
 
+        params['updated_at_max'] = '2020-10-08T00:00:00'
+
         LOGGER.info('{} - Sync start {}'.format(
             stream_name,
             'since: {}, '.format(last_datetime) if bookmark_query_field else ''))
