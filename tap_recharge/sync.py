@@ -139,7 +139,7 @@ def sync_endpoint(client, #pylint: disable=too-many-branches
 
         if bookmark_query_field:
             if bookmark_type == 'datetime':
-                params[bookmark_query_field] = last_datetime[0:10] # last_datetime date
+                params[bookmark_query_field] = last_datetime # last_datetime date
             elif bookmark_type == 'integer':
                 params[bookmark_query_field] = last_integer
 
@@ -435,7 +435,7 @@ def sync(client, catalog, state, start_date):
             'path': 'subscriptions',
             'params': {},
             'data_key': 'subscriptions',
-            'bookmark_query_field': 'updated_at_min',
+            'bookmark_query_field': 'updated_at_max',
             'bookmark_field': 'updated_at',
             'bookmark_type': 'datetime',
             'id_fields': ['id']
